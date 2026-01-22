@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Thomas Truffier-Blanc</title>
+    
+    <!-- Polices et Icônes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">TTB.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À Propos</a></li>
+            <li><a href="#formation">Formation</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#interests">Loisirs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="tag">Étudiant BUT R&T</span>
+            <h1>Thomas <br> <span class="highlight">Truffier-Blanc</span></h1>
+            <p>Étudiant en 1ère année de BUT Réseaux et Télécommunications à l'IUT d'Aubière. Déterminé à apprendre et à évoluer dans le monde professionnel.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn primary">Me contacter</a>
+                <a href="files/cv_Thomas_TB.pdf" class="btn secondary"><i class="fas fa-download"></i> Télécharger CV</a>
+            </div>
+        </div>
+        <div class="hero-img">
+            <div class="img-container">
+                <img src="image/photo.png" alt="Thomas Truffier-Blanc">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="about" class="container">
+        <h2 class="section-title">À Propos de moi</h2>
+        <div class="glass">
+            <p>J'ai 17 ans et je réside actuellement à Clermont-Ferrand. Originaire de la région Stéphanoise. J'ai vécu 5 ans en Nouvelle-Calédonie et 5 ans à Tahiti où j'ai effectué ma scolarité avant de revenir en métropole pour ma terminale.</p>
+            <br>
+            <p>Ma passion pour le domaine s'est concrétisée en Première grâce à mon professeur de NSI, qui m'a initié à la cybersécurité via un concours de <strong>CTF (Capture The Flag)</strong>. Je m'intéressais déjà à ce sujet mais c'est vraiment ce déclic qui m'a poussé à rejoindre le BUT Réseaux et Télécommunications pour approfondir mes compétences techniques.</p>
+            <br>
+            <p>Aujourd'hui, je souhaite mettre mon adaptabilité, ma patience et mon sens de l'organisation au service d'une équipe. Dans le cadre de ma formation, je suis à la recherche d'un <strong>stage à compter d'avril 2027</strong>.</p>
+        </div>
+    </section>
+
+    <!-- Section Formation -->
+    <section id="formation" class="container">
+        <h2 class="section-title">Parcours & Formation</h2>
+        <p style="text-align:center; color: var(--text-muted); margin-bottom: 30px;">(Cliquez sur une formation pour voir les détails)</p>
+        
+        <div class="timeline">
+            <!-- Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <!-- Le lien #panel-iut ouvre le modal correspondant plus bas -->
+                <a href="#panel-iut" class="timeline-link">
+                    <div class="timeline-content glass">
+                        <h3>BUT Réseaux et Télécommunications</h3>
+                        <span class="date">Septembre 2025 - Présent</span>
+                        <p>IUT Clermont Auvergne - Site d'Aubière (63).</p>
+                        <span class="click-hint"><i class="fas fa-plus-circle"></i> En savoir plus</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <a href="#panel-bac" class="timeline-link">
+                    <div class="timeline-content glass">
+                        <h3>Baccalauréat Général</h3>
+                        <span class="date">Décembre 2024 - Juin 2025</span>
+                        <p>Lycée François Mauriac, Andrézieux-Bouthéon.</p>
+                        <span class="click-hint"><i class="fas fa-plus-circle"></i> En savoir plus</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <a href="#panel-om" class="timeline-link">
+                    <div class="timeline-content glass">
+                        <h3>Scolarité en Outre-mer</h3>
+                        <span class="date">Octobre 2015 - Décembre 2024</span>
+                        <p>Collège et Lycée en Nouvelle-Calédonie.</p>
+                        <span class="click-hint"><i class="fas fa-plus-circle"></i> En savoir plus</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences (Système d'onglets via Radio Buttons) -->
+    <section id="skills" class="container">
+        <h2 class="section-title">Mes Compétences</h2>
+        
+        <input type="radio" name="skill-tab" id="tab-tech" class="skills-radio" checked>
+        <input type="radio" name="skill-tab" id="tab-human" class="skills-radio">
+
+        <div class="skills-controls">
+            <label for="tab-tech" class="skills-label">Techniques</label>
+            <label for="tab-human" class="skills-label">Humaines & Langues</label>
+        </div>
+
+        <!-- Grille Techniques -->
+        <div class="skills-grid" id="tech-skills-grid">
+            <a href="#panel-network" style="text-decoration:none; color:inherit;">
+                <div class="skill-card glass">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Réseaux</h3>
+                    <p>Configuration point d'accès, Plan d'adressage IP</p>
+                    <span class="click-hint small" style="margin-top:10px; font-size:0.8rem; color:#38bdf8;">Voir détails</span>
+                </div>
+            </a>
+            
+            <a href="#panel-telecom" style="text-decoration:none; color:inherit;">
+                <div class="skill-card glass">
+                    <i class="fas fa-wave-square"></i>
+                    <h3>Télécoms</h3>
+                    <p>Oscilloscope, Générateur de tension</p>
+                    <span class="click-hint small" style="margin-top:10px; font-size:0.8rem; color:#38bdf8;">Voir détails</span>
+                </div>
+            </a>
+
+            <a href="#panel-code" style="text-decoration:none; color:inherit;">
+                <div class="skill-card glass">
+                    <i class="fas fa-code"></i>
+                    <h3>Programmation</h3>
+                    <p>Python, HTML, CSS</p>
+                    <span class="click-hint small" style="margin-top:10px; font-size:0.8rem; color:#38bdf8;">Voir détails</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Grille Humaines -->
+        <div class="skills-grid" id="human-skills-grid">
+            <a href="#panel-qualities" style="text-decoration:none; color:inherit;">
+                <div class="skill-card glass">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Qualités</h3>
+                    <p>Adaptable, Organisation, Patience</p>
+                    <span class="click-hint small" style="margin-top:10px; font-size:0.8rem; color:#38bdf8;">En savoir plus</span>
+                </div>
+            </a>
+            
+            <div class="skill-card glass">
+                <i class="fas fa-language"></i>
+                <h3>Anglais</h3>
+                <p>Niveau B2</p>
+            </div>
+            <div class="skill-card glass">
+                <i class="fas fa-comment-dots"></i>
+                <h3>Espagnol</h3>
+                <p>Niveau scolaire</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects" class="container">
+        <h2 class="section-title">Mes Projets</h2>
+        
+        <div class="carousel-wrapper">
+            <div class="carousel-track">
+                
+                <a href="#panel-whitesentinel" class="project-card-link">
+                    <div class="project-card glass">
+                        <div class="project-img-placeholder" style="background: linear-gradient(45deg, #3b82f6, #0f172a);">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>HackAgou.NC</h3>
+                            <p>Hackathon et CTF</p>
+                            <span class="click-hint small"><i class="fas fa-eye"></i> Voir détails</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#panel-autotech" class="project-card-link">
+                    <div class="project-card glass">
+                        <div class="project-img-placeholder" style="background: linear-gradient(45deg, #f97316, #0f172a);">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Map.NC</h3>
+                            <p>Site web & Database</p>
+                            <span class="click-hint small"><i class="fas fa-eye"></i> Voir détails</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#panel-portfolio" class="project-card-link">
+                    <div class="project-card glass">
+                        <div class="project-img-placeholder" style="background: linear-gradient(45deg, #10b981, #0f172a);">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Portfolio V1</h3>
+                            <p>Développement Web Front-End</p>
+                            <span class="click-hint small"><i class="fas fa-eye"></i> Voir détails</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#panel-config_cisco" class="project-card-link">
+                    <div class="project-card glass">
+                        <div class="project-img-placeholder" style="background: linear-gradient(45deg, #6366f1, #0f172a);">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Net ToolBox</h3>
+                            <p>Application</p>
+                            <span class="click-hint small"><i class="fas fa-eye"></i> Voir détails</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Loisirs -->
+    <section id="interests" class="container">
+        <h2 class="section-title">Centres d'intérêt</h2>
+        <div class="interests-grid">
+            
+            <a href="#panel-sport" class="interest-item glass">
+                <i class="fas fa-dumbbell"></i>
+                <div>
+                    <h4>Sport</h4>
+                    <p>Judo (7 ans), Squash (4 ans)</p>
+                    <span class="click-hint small" style="font-size: 0.9rem; color: #38bdf8;">En savoir plus</span>
+                </div>
+            </a>
+
+            <a href="#panel-diving" class="interest-item glass">
+                <i class="fas fa-water"></i>
+                <div>
+                    <h4>Activités Nautiques</h4>
+                    <p>Plongée en bouteille</p>
+                    <span class="click-hint small" style="font-size: 0.9rem; color: #38bdf8;">En savoir plus</span>
+                </div>
+            </a>
+
+            <a href="#panel-music" class="interest-item glass">
+                <i class="fas fa-music"></i>
+                <div>
+                    <h4>Musique & Jeux</h4>
+                    <p>Guitare, Jeux vidéo</p>
+                    <span class="click-hint small" style="font-size: 0.9rem; color: #38bdf8;">En savoir plus</span>
+                </div>
+            </a>
+
+            <a href="#panel-travel" class="interest-item glass">
+                <i class="fas fa-plane-departure"></i>
+                <div>
+                    <h4>Voyages</h4>
+                    <p>États-Unis, Océanie</p>
+                    <span class="click-hint small" style="font-size: 0.9rem; color: #38bdf8;">En savoir plus</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h2>Me Contacter</h2>
+            <div class="glass" style="display: inline-block; text-align: left; margin-top: 20px;">
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 48 Rue Pablo Picasso, Clermont Ferrand, 63000</p>
+                    <p><i class="fas fa-envelope"></i> Thomas.TRUFFIER-BLANC@etu.uca.fr</p>
+                    <p><i class="fas fa-phone"></i> 06 11 09 23 09</p>
+                </div>
+            </div>
+            <p class="copyright" style="margin-top: 30px;">© 2025 Thomas Truffier-Blanc.</p>
+        </div>
+    </footer>
+
+    <div id="panel-iut" class="modal-wrapper">
+        <a href="#formation" class="modal-backdrop"></a> 
+        <div class="side-panel">
+            <a href="#formation" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>BUT Réseaux & Télécoms</h2>
+                    <span class="panel-date">Septembre 2025 - Présent</span>
+                    <p class="panel-location">IUT Clermont Auvergne - Site d'Aubière</p>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <h4>Objectif de la Formation</h4>
+                    <p>Le BUT Réseaux et Télécommunications est une formation en 3 ans, accessible après le baccalauréat. Cette formation vise à former des techniciens supérieurs compétents dans les domaines des réseaux informatiques, des télécommunications et de la cybersécurité.</p>
+                    <h4>Pourquoi l'IUT d'Aubière ?</h4>
+                    <p>J'ai choisi cette formation pour apprendre les concepts fondamentaux des réseaux, de la sécurité et des télécommunications à travers des cours, des travaux dirigés (TD) et des TP.</p>
+                    <h4>Et maintenant ?</h4>
+                    <p>Je suis actuellement en première année.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel-bac" class="modal-wrapper">
+        <a href="#formation" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#formation" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>Baccalauréat Général</h2>
+                    <span class="panel-date">2024 - 2025</span>
+                    <p class="panel-location">Lycée François Mauriac</p>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <h4>Spécialités</h4>
+                    <p>Mathématiques et Numérique et Sciences de l'Informatique (NSI).<br>Mention Assez Bien.</p>
+                    <h4>Compétences acquises</h4>
+                    <p>Bases solides en Python, compréhension du web (HTML/CSS), algorithmique avancée et gestion de bases de données.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel-om" class="modal-wrapper">
+        <a href="#formation" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#formation" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>Scolarité en Outre-mer</h2>
+                    <span class="panel-date">2015 - 2024</span>
+                    <p class="panel-location">Tahiti - Nouvelle-Calédonie</p>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <h4>Contexte</h4>
+                    <p>J'ai vécu et étudié pendant près de 10 ans en Nouvelle-Calédonie et Tahiti, où j'ai effectué l'intégralité de mon collège et la majorité de mon lycée et de mon école primaire.</p>
+                    <h4>Apports personnels</h4>
+                    <p>Cette expérience m'a apporté une grande ouverture d'esprit et une capacité d'adaptation importante.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJETS -->
+    <div id="panel-whitesentinel" class="modal-wrapper">
+        <a href="#projects" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#projects" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>HackAgou.NC</h2>
+                    <span class="panel-date">Cybersécurité & Système</span>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <h4>Contexte</h4>
+                    <p>En 2023, lorsque j’étais scolarisé en seconde à Nouméa, le lycée nous a fait part de l’existence de ce concours et j’ai donc décidé de m’y inscrire avec deux autres amis.</p>
+                    <h4>Objectif</h4>
+                    <p>Terminer des défis en retrouvant une chaîne de caractères dans différents challenges de cybersécurité.</p>
+                    <h4>Travail réalisé</h4>
+                    <ul>
+                        <li>Création de scripts en Bash pour automatiser des processus.</li>
+                        <li>Utilisation de logiciels de scan d’appareils pour identifier d’éventuelles failles.</li>
+                    </ul>
+                    <h4>Résultat</h4>
+                    <p>Édition 2025: 32<sup>e</sup> sur 82 équipes.</p>
+                    <p>Édition 2024: 54<sup>e</sup> sur 88 équipes.</p>
+                    <p>Édition 2023: 67<sup>e</sup> sur 96 équipes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel-autotech" class="modal-wrapper">
+        <a href="#projects" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#projects" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>Map.NC</h2>
+                    <span class="panel-date">Web & Database</span>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <h4>Contexte</h4>
+                    <p>En 2024, suite aux émeutes en Nouvelle-Calédonie, nous avons créé avec ma classe un site web pour partager des informations rapides.</p>
+                    <img src="image/map.png" alt="Interface Map.NC">
+                    <h4>Objectif</h4>
+                    <p>Carte interactive pour localiser zones sinistrées, barrages ou points de ravitaillement.</p>
+                    <h4>Travail réalisé</h4>
+                    <ul>
+                        <li>Développement Front-End HTML/CSS/JS.</li>
+                        <li>Base de données MySQL.</li>
+                        <li>Backend PHP.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel-portfolio" class="modal-wrapper">
+        <a href="#projects" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#projects" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>Portfolio V1</h2>
+                    <span class="panel-date">Développement Front-End</span>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <h4>Contexte</h4>
+                    <p>Projet personnel pour consolider mes compétences en développement web.</p>
+                    <h4>Travail réalisé</h4>
+                    <ul>
+                        <li>Design UI moderne (Glassmorphism).</li>
+                        <li>Intégration HTML5/CSS3 sans framework.</li>
+                        <li>Optimisation responsive.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel-config_cisco" class="modal-wrapper">
+        <a href="#projects" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#projects" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>Net ToolBox</h2>
+                    <span class="panel-date">Réseaux - Routing & Switching</span>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <h4>Contexte</h4>
+                    <p>Projet d'apprentissage personnel sur le développement mobile et l'administration réseau.</p>
+                    <img src="image/app.png" alt="Interface App">
+                    <h4>Objectif</h4>
+                    <p>Application centralisant des outils pour le diagnostic réseau sur smartphone.</p>
+                    <h4>Travail réalisé</h4>
+                    <ul>
+                        <li>Interface XML Android Studio.</li>
+                        <li>Calculateur sous-réseaux (IP Calc).</li>
+                        <li>Moniteur Wi-Fi temps réel.</li>
+                        <li>Client TCP.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COMPÉTENCES -->
+    <div id="panel-network" class="modal-wrapper">
+        <a href="#skills" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#skills" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>Réseaux Informatiques</h2>
+                    <span class="panel-date">Architecture & Administration</span>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <details>
+                        <summary>Installation d’équipements réseaux</summary>
+                        <div class="details-content">
+                            <p>Manipulation d'équipements Cisco et D-LINK.</p>
+                            <ul>
+                                <li><strong>Switchs :</strong> CLI, VLAN, Trunk.</li>
+                                <li><strong>Routeurs :</strong> Routage RIP, OSPF.</li>
+                                <li><strong>Wi-Fi :</strong> Portails captifs, AP.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Service Réseau</summary>
+                        <div class="details-content">
+                            <p>Assurer la connectivité :</p>
+                            <ul>
+                                <li>NAT, PAT, DNAT.</li>
+                                <li>Serveurs DHCP et DNS.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>Virtualisation</summary>
+                        <div class="details-content">
+                            <ul>
+                                <li>Hyperviseurs (VMware, VirtualBox).</li>
+                                <li>Serveurs Linux (Debian) et Windows Server.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel-telecom" class="modal-wrapper">
+        <a href="#skills" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#skills" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>Télécommunications</h2>
+                    <span class="panel-date">Signaux & Transmission</span>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <details>
+                        <summary>Oscilloscope</summary>
+                        <div class="details-content">
+                            <p>Mesure de l'amplitude, de la période et de la fréquence. Analyse temporelle des signaux.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>GBF (Générateur)</summary>
+                        <div class="details-content">
+                            <p>Génération de signaux (Sinusoïdal, Carré, Triangle) et réglage Vpp.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel-code" class="modal-wrapper">
+        <a href="#skills" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#skills" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>Programmation</h2>
+                    <span class="panel-date">Dév & Scripting</span>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <details>
+                        <summary>Web</summary>
+                        <div class="details-content">
+                            <p>HTML5 / CSS3 (Design responsive), notions de JavaScript.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Bash</summary>
+                        <div class="details-content">
+                            <p>Administration Linux, scripts d'automatisation (sauvegardes, logs).</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Python</summary>
+                        <div class="details-content">
+                            <p>Traitement de données, algorithmique et scripts réseaux.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel-qualities" class="modal-wrapper">
+        <a href="#skills" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#skills" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>Qualités Humaines</h2>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <ul>
+                        <li><strong>Adaptabilité :</strong> Intégration rapide grâce à mes nombreux déménagements (Tahiti, NC, France).</li>
+                        <li><strong>Organisation :</strong> Gestion de projets complexes en parallèle des cours.</li>
+                        <li><strong>Patience :</strong> Persévérance dans le débogage et la résolution de problèmes techniques.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOISIRS -->
+    <div id="panel-sport" class="modal-wrapper">
+        <a href="#interests" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#interests" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>Sport</h2>
+                    <span class="panel-date">Engagement & Discipline</span>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <h4>Judo (7 ans)</h4>
+                    <p>Respect des règles, rigueur et persévérance. Ceinture verte.</p>
+                    <h4>Squash (4 ans)</h4>
+                    <p>Réactivité, stratégie rapide et condition physique.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel-diving" class="modal-wrapper">
+        <a href="#interests" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#interests" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>Activités Nautiques</h2>
+                    <span class="panel-date">Rigueur & Sang-froid</span>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <h4>Plongée en Bouteille</h4>
+                    <p>Pratiquée à Tahiti et en Nouvelle-Calédonie. Exige calme, gestion stricte des protocoles de sécurité et confiance en son binôme.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel-music" class="modal-wrapper">
+        <a href="#interests" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#interests" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>Musique & Jeux</h2>
+                    <span class="panel-date">Créativité & Stratégie</span>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <h4>Guitare</h4>
+                    <p>Développe la créativité et la concentration.</p>
+                    <h4>Jeux Vidéo</h4>
+                    <p>Communication et stratégie d'équipe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel-travel" class="modal-wrapper">
+        <a href="#interests" class="modal-backdrop"></a>
+        <div class="side-panel">
+            <a href="#interests" class="close-btn">&times;</a>
+            <div class="panel-content">
+                <div class="panel-header">
+                    <h2>Voyages</h2>
+                    <span class="panel-date">Ouverture Culturelle</span>
+                </div>
+                <hr class="panel-divider">
+                <div class="panel-body">
+                    <h4>Océanie</h4>
+                    <p>10 ans de vie en Nouvelle-Calédonie et Tahiti.</p>
+                    <h4>États-Unis</h4>
+                    <p>Visite de nombreux états, renforcement de l'anglais et de l'autonomie.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
